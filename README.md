@@ -28,7 +28,7 @@ We split the data as 90% train - 10% test.
 	5. Every audio willl be converted into a simple 2-D image, and this image will be fed to a CNN. This will speed up the training, and as CNNs are flawless in simple image recognition, we will definitely get a good output.
 	
 <p align="center">
-	<img src='/images/spectrogram.png' alt='Sample Spectrogram'> 
+	<img src='images/spectrogram.png' alt='Sample Spectrogram'> 
 	<br/>
 	<i>Spectrogram</i>
 </p>
