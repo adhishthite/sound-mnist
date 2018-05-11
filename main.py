@@ -1,5 +1,5 @@
 from comet_ml import Experiment
-experiment = Experiment(api_key="S1ApsUzOKM7jwtsLLcT1drdZ0", project_name="soundmnist")
+experiment = Experiment(api_key="<HIDDEN>", project_name="soundmnist")
 
 from utils import model, wav2mfcc, get_data
 import test
