@@ -76,7 +76,7 @@ We use **Keras** for the model building.
 <p align="center">
 	<img src='images/model-loss.jpeg' alt='Loss'> 
 	<br/>
-	<i>Model Accuracy</i>
+	<i>Model Loss</i>
 </p>
 
 **We get 98% validation accuracy!**
