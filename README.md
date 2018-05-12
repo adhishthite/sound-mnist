@@ -53,7 +53,7 @@ We use **Keras** for the model building.
 	3. Number of epochs - 50<br/>
 	4. Batch Size - 64<br/>
 	5. Learning rate - Adadelta default<br/>
-	6. Loss - Categorical Crossentropy
+	6. Loss - Categorical Crossentropy<br/>
 	
 * **Model Structure**<br/>
 	1. 3 convolutional layers
@@ -62,6 +62,12 @@ We use **Keras** for the model building.
 	4. Softmax Activation for output
 	5. BatchNormalization Layer after every Conv Layer and Dense Layer.
 	6. Dropout for every layer of MLP.
+	
+<p align="center">
+	<img src='images/model-vis.png' alt='Model'> 
+	<br/>
+	<i>Tensorboard Visualisation of Model</i>
+</p>
 
 ## Step 3 - Training
 

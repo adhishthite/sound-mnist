@@ -4,11 +4,16 @@ experiment = Experiment(project_name="soundmnist")
 from utils import model, wav2mfcc, get_data
 import test
 
+# Tensorboard
+import keras
+keras_callback = keras.callbacks.TensorBoard(log_dir='./Graph', histogram_freq=1,
+                                             write_graph=True, write_images=True)
+
 X_train, X_test, y_train, y_test, cnn_model = get_data.get_all()
 
 print(cnn_model.summary())
 
-cnn_model.fit(X_train, y_train, batch_size=64, epochs=50, verbose=1, validation_split=0.1)
+cnn_model.fit(X_train, y_train, batch_size=64, epochs=50, verbose=1, validation_split=0.1, callbacks=[keras_callback])
 
 cnn_model.save('trained_model.h5')
 
