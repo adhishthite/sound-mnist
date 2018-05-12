@@ -107,4 +107,4 @@ We use the test data to check the model performance on new data. Based on the re
 	avg / total       0.97      0.97      0.97       150
 	
 
-Thus, we have trained a Neural Network to correctly classify spoken digits.
+We have thus trained a Neural Network to correctly classify spoken digits.
