@@ -2,7 +2,7 @@ import keras
 from keras.models import Sequential
 from keras.layers import Dense, Dropout, Flatten, Conv2D, MaxPooling2D, BatchNormalization
 
-# from ann_visualizer.visualize import ann_viz;
+#from ann_visualizer.visualize import ann_viz
 
 def get_cnn_model(input_shape, num_classes):
     model = Sequential()
@@ -30,12 +30,10 @@ def get_cnn_model(input_shape, num_classes):
     model.add(Dense(num_classes, activation='softmax'))
     model.compile(loss=keras.losses.categorical_crossentropy, optimizer=keras.optimizers.Adadelta(), metrics=['accuracy'])
 
-    #ann_viz(model, title="Neural Network Model", filename='../images/model.gv')
-
     return model
 
 
 # if __name__ == '__main__':
 #     model = get_cnn_model((20, 20, 1), 10)
-#
+#     #ann_viz(model, title="Neural Network Model", filename='../images/model.gv')
 #     print(model.summary())
