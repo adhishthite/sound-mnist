@@ -1,7 +1,7 @@
 import numpy as np
 import librosa
 import os
-from keras.utils import to_categorical
+import tensorflow as tf
 
 def wav2mfcc(file_path, max_pad_len=20):
     wave, sr = librosa.load(file_path, mono=True, sr=None)
@@ -25,7 +25,7 @@ def get_data():
             label = f.split('_')[0]
             labels.append(label)
 
-    return np.asarray(mfccs), to_categorical(labels)
+    return np.asarray(mfccs), tf.keras.utils.to_categorical(labels)
 
 # if __name__ == '__main__':
 #     mfccs, labels = get_data()
