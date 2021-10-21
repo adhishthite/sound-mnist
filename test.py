@@ -7,10 +7,9 @@ import tensorflow as tf
 def check_preds(X, y):
 
     trained_model = keras.models.load_model('trained_model.h5')
-    predictions = trained_model.predict(X) # predictions = trained_model.predict_classes(X)
+    predictions = trained_model.predict(X)
     classes_x = np.argmax(predictions, axis=1)
     print(classification_report(y, tf.keras.utils.to_categorical(classes_x)))
-    #print(classification_report(y, tf.keras.utils.to_categorical(predictions)))
 
 
 if __name__ == '__main__':
